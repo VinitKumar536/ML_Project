@@ -127,3 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+# ML training artifacts
+artifacts/
+catboost_info/
+*.pkl  
+*.joblib
+
+
