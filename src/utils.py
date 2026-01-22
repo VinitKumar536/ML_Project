@@ -1,3 +1,9 @@
+# utils.py is needed to keep common helper logic in one place instead of repeating it everywhere.
+
+# It stores small, reusable functions such as reading configuration files, saving/loading objects,
+# logging helpers, path handling, and validation checks. This reduces code duplication, keeps main 
+# files focused on core logic, and makes the project easier to maintain and debug. When a change is
+# required, it is done once in utils.py and automatically applied across the entire project.
 import os
 import sys
 

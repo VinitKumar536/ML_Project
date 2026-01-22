@@ -1,3 +1,12 @@
+# Data transformation is required to convert raw, inconsistent input into a structured, numerical,
+# and model-compatible form. Real-world data contains missing values, noise, scale imbalance,
+# categorical variables, and format drift that machine learning algorithms cannot handle directly. 
+# Transformation enforces consistency by cleaning data, encoding categories, scaling features, 
+# handling outliers, and aligning schemas between training and inference. It preserves statistical 
+# validity, prevents data leakage, and ensures the same preprocessing logic is applied everywhere. 
+# Without data transformation, models learn artifacts instead of patterns, performance becomes unstable,
+# and production predictions fail due to input mismatch.
+
 import sys
 from dataclasses import dataclass
 
@@ -16,7 +25,7 @@ from src.utils import save_object
 
 @dataclass
 class DataTransformationConfig:
-    preprocessor_obj_file_path=os.path.join('artifacts',"proprocessor.pkl")
+    preprocessor_obj_file_path=os.path.join('artifacts',"preprocessor.pkl")
 
 class DataTransformation:
     def __init__(self):

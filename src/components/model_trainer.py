@@ -1,3 +1,11 @@
+# A model trainer is responsible for converting transformed data into a trained, evaluable, 
+# and reproducible model artifact.
+
+# It encapsulates the logic for selecting the algorithm, initializing hyperparameters, fitting the model on
+#     training data, validating performance on unseen data, and persisting the trained model. The trainer 
+# enforces separation between preprocessing and learning, ensures consistent evaluation metrics, prevents 
+# data leakage, and enables experiment repeatability. In production pipelines, it provides a deterministic 
+# step that can be re-run, versioned, and audited, making model behavior explainable and deployment-safe.
 import os
 import sys
 from dataclasses import dataclass
@@ -78,7 +86,7 @@ class ModelTrainer:
                 },
                 "AdaBoost Regressor":{
                     'learning_rate':[.1,.01,0.5,.001],
-                    # 'loss':['linear','square','exponential'],
+                    'loss':['linear','square','exponential'],
                     'n_estimators': [8,16,32,64,128,256]
                 }
                 
